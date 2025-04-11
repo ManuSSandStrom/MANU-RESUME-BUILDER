@@ -1,31 +1,31 @@
 // Real-time Preview Updates
 function updatePreview() {
     // Personal Details
-    document.getElementById('preview-name').textContent = document.getElementById('name').value || 'MANOHAR BASAPPAGARI';
-    document.getElementById('preview-position').textContent = document.getElementById('position').value || 'FRONTEND WEB DEVELOPER';
-    document.getElementById('preview-phone').textContent = document.getElementById('phone').value || '9515022680';
-    document.getElementById('preview-email').textContent = document.getElementById('email').value || 'manoharbasappagari18@gmail.com';
-    document.getElementById('preview-linkedin').textContent = document.getElementById('linkedin').value.split('/').pop() || 'ykyw';
-    document.getElementById('preview-linkedin').href = document.getElementById('linkedin').value || 'https://linkedin.com/in/ykyw';
-    document.getElementById('preview-github').textContent = document.getElementById('github').value.split('/').pop() || 'ManuSSandStrom';
-    document.getElementById('preview-github').href = document.getElementById('github').value || 'https://github.com/ManuSSandStrom';
-    document.getElementById('preview-summary').textContent = document.getElementById('summary').value || 'A motivated MCA student at MITS with a strong foundation in C, Java, HTML, and CSS. Completed BCA, gaining expertise in software development, web technologies, and problem-solving. Passionate about coding, designing user-friendly applications, and continuously learning new technologies. Seeking opportunities to apply technical skills and analytical thinking to contribute effectively to dynamic IT environments.';
+    document.getElementById('preview-name').textContent = document.getElementById('name').value || '';
+    document.getElementById('preview-position').textContent = document.getElementById('position').value || '';
+    document.getElementById('preview-phone').textContent = document.getElementById('phone').value || '';
+    document.getElementById('preview-email').textContent = document.getElementById('email').value || '';
+    document.getElementById('preview-linkedin').textContent = document.getElementById('linkedin').value.split('/').pop() || '';
+    document.getElementById('preview-linkedin').href = document.getElementById('linkedin').value || '';
+    document.getElementById('preview-github').textContent = document.getElementById('github').value.split('/').pop() || '';
+    document.getElementById('preview-github').href = document.getElementById('github').value || '';
+    document.getElementById('preview-summary').textContent = document.getElementById('summary').value || '';
 
     // Skills
-    document.getElementById('preview-technical-skills').textContent = document.getElementById('technical-skills').value || 'HTML, CSS';
-    document.getElementById('preview-programming-languages').textContent = document.getElementById('programming-languages').value || 'Java, C';
-    document.getElementById('preview-tools').textContent = document.getElementById('tools').value || 'MS Word, Excel, PowerPoint';
-    document.getElementById('preview-version-control').textContent = document.getElementById('version-control').value || 'Git (basic)';
-    document.getElementById('preview-ides').textContent = document.getElementById('ides').value || 'VS Code, Eclipse';
+    document.getElementById('preview-technical-skills').textContent = document.getElementById('technical-skills').value || '';
+    document.getElementById('preview-programming-languages').textContent = document.getElementById('programming-languages').value || '';
+    document.getElementById('preview-tools').textContent = document.getElementById('tools').value || '';
+    document.getElementById('preview-version-control').textContent = document.getElementById('version-control').value || '';
+    document.getElementById('preview-ides').textContent = document.getElementById('ides').value || '';
 
     // Languages
-    document.getElementById('preview-languages').innerHTML = `<li>${document.getElementById('languages').value || 'English, Telugu, Kannada, Hindi, Urdu'}</li>`;
+    document.getElementById('preview-languages').innerHTML = document.getElementById('languages').value ? `<li>${document.getElementById('languages').value}</li>` : '';
 
     // Certifications
-    const certificationsInput = document.getElementById('certifications').value || 'Cloud Assure Certified';
+    const certificationsInput = document.getElementById('certifications').value || '';
     const certificationsArray = certificationsInput.split('\n').filter(cert => cert.trim() !== '');
     const previewCertifications = document.getElementById('preview-certifications');
-    previewCertifications.innerHTML = certificationsArray.map(cert => `<li>${cert.trim()}</li>`).join('');
+    previewCertifications.innerHTML = certificationsArray.length ? certificationsArray.map(cert => `<li>${cert.trim()}</li>`).join('') : '';
 
     // Education, Experience, Projects updated dynamically in their respective functions
     updateEducationPreview();
@@ -74,9 +74,9 @@ function updateEducationPreview() {
     const preview = document.getElementById('preview-education');
     preview.innerHTML = '';
     entries.forEach(entry => {
-        const degree = entry.children[1].value || 'MCA (Masters of Computer Applications) Pursuing';
-        const institute = entry.children[2].value || 'MITS (Madanapalle Institute of Technology and Science)';
-        const year = entry.children[3].value || '2024-2026';
+        const degree = entry.children[1].value || '';
+        const institute = entry.children[2].value || '';
+        const year = entry.children[3].value || '';
         if (degree || institute || year) {
             preview.innerHTML += `<li>${degree} - ${institute} - ${year}</li>`;
         }
@@ -124,9 +124,9 @@ function updateExperiencePreview() {
     const preview = document.getElementById('preview-experience');
     preview.innerHTML = '';
     entries.forEach(entry => {
-        const role = entry.children[1].value || 'Customer Care Executive';
-        const company = entry.children[2].value || 'Allsec Technologies Pvt. Ltd, Bangalore';
-        const duration = entry.children[3].value || 'January 2024 – June 2024 (6 Months)';
+        const role = entry.children[1].value || '';
+        const company = entry.children[2].value || '';
+        const duration = entry.children[3].value || '';
         if (role || company || duration) {
             preview.innerHTML += `<li>${role} - ${company} - ${duration}</li>`;
         }
@@ -173,8 +173,8 @@ function updateProjectPreview() {
     const preview = document.getElementById('preview-projects');
     preview.innerHTML = '';
     entries.forEach(entry => {
-        const name = entry.children[1].value || (entries.length > 1 && entries[0].children[1].value === 'Resume Builder' ? 'Study-Sync AI' : 'Resume Builder');
-        const description = entry.children[2].value || (entries.length > 1 && entries[0].children[2].value.includes('Resume Builder') ? 'Created a web-based platform for students to manage academic schedules and receive AI-driven study recommendations. Built using HTML, CSS, and Java, with AI integration for smart study tips and prioritization.' : 'Developed a dynamic resume builder using HTML, CSS, and JavaScript, enabling users to input and generate downloadable resumes in real-time.');
+        const name = entry.children[1].value || '';
+        const description = entry.children[2].value || '';
         if (name || description) {
             preview.innerHTML += `<li>${name} - ${description}</li>`;
         }
@@ -264,7 +264,7 @@ function saveResume() {
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
-    // Initial preview update
+    // Initial preview update with empty state
     updatePreview();
 
     // Real-time input updates
