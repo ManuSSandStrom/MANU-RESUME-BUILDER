@@ -1,0 +1,459 @@
+/* General Styling */
+body {
+    font-family: 'Calibri', sans-serif; /* ATS-friendly, clean sans-serif font */
+    background-color: #ffffff; /* White background for mobile compatibility */
+    color: #2B2B2B; /* Dark gray for body content */
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+/* Container Adjustments */
+.container-fluid {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Main Heading */
+h1 {
+    font-family: 'Barlow', sans-serif; /* Using Barlow from Google Fonts for consistency with original */
+    font-weight: 700; /* Bold for headings */
+    color: #000000; /* Pure black for headings */
+    margin-bottom: 10px;
+    font-size: 24px; /* Increased for prominence, aligning with original h1 size */
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase; /* Match original styling */
+}
+
+/* Navigation Buttons */
+.nav {
+    position: fixed;
+    top: 40%;
+    left: 2%;
+}
+
+.navbtn {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: #fff 2px solid;
+    transition: 300ms ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.navbtn:nth-child(2) {
+    top: 8px;
+}
+
+.navbtn:nth-child(3) {
+    top: 16px;
+}
+
+.navbtn:hover {
+    background-color: #000000;
+    color: #fff;
+    border: #000000 2px solid;
+    height: 45px;
+    width: 45px;
+}
+
+.navbtn i {
+    font-size: 16px;
+}
+
+/* Form Section */
+#resumeForm {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#resumeForm h3 {
+    font-family: 'Barlow', sans-serif; /* Using Barlow for consistency */
+    font-weight: 700; /* Bold for headings */
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px; /* 12–14pt equivalent */
+    border-bottom: 1px solid #000000;
+    padding-bottom: 3px;
+}
+
+.form-label {
+    font-family: 'Raleway', sans-serif; /* Using Raleway for form labels */
+    font-weight: 500;
+    color: #2B2B2B;
+    font-size: 14px; /* 10.5–11.5pt equivalent */
+}
+
+.form-control {
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+    transition: border-color 0.3s ease;
+    font-size: 14px; /* 10.5–11.5pt equivalent */
+}
+
+.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+/* Buttons in Form */
+.btn-secondary, .btn-primary {
+    border-radius: 3px;
+    padding: 6px 15px;
+    font-weight: 500;
+    font-size: 14px; /* 10.5–11.5pt equivalent */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #7f8c8d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #95a5a6;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+}
+
+.btn-danger {
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkboxes */
+.input-checkbox {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Resume Preview Section */
+#resume-preview {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0.02in; /* Further reduced to minimize space */
+    width: 8.5in; /* Standard letter width */
+    min-height: 10.96in; /* Adjusted to fit within 11in with 0.02in margins */
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: visible !important;
+    font-family: 'Calibri', sans-serif;
+    font-size: 9px; /* Reduced from 10px to further compact */
+    line-height: 1.0; /* Reduced from 1.1 for tightest spacing */
+    border: 1px solid #dcdcdc; /* Subtle border */
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Reduced from 6px for tighter layout */
+}
+
+/* Styled Section Dividers */
+hr.section-divider {
+    border: 0;
+    border-top: 1px solid #000000; /* Simple black line */
+    margin: 2px 0; /* Reduced from 4px for tighter spacing */
+    height: 1px;
+}
+
+/* Header Styling */
+#preview-name {
+    font-family: 'Barlow', sans-serif; /* Using Barlow for consistency */
+    font-weight: 700; /* Bold for heading */
+    font-size: 11px; /* Reduced from 12px to compact */
+    color: #000000;
+    margin-bottom: 1px; /* Reduced from 1px */
+    text-align: center;
+    padding: 1px 0; /* Reduced from 1px */
+    border-bottom: 2px solid #000000;
+    text-transform: uppercase; /* Match original styling */
+}
+
+#preview-position {
+    font-family: 'Calibri', sans-serif;
+    font-weight: 500;
+    font-size: 9px; /* Reduced from 10px to compact */
+    color: #2B2B2B;
+    margin-bottom: 1px; /* Reduced from 2px */
+    text-align: center;
+    text-transform: uppercase; /* Match original styling */
+}
+
+/* Contact Styling */
+#preview-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px; /* Reduced from 10px to compact */
+    color: #2B2B2B;
+    padding: 1px 0; /* Reduced from 1px */
+    background: #ffffff;
+    flex-wrap: wrap;
+}
+
+#preview-contact p {
+    margin: 0 1px; /* Reduced from 1px */
+    font-size: 9px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#preview-contact i {
+    color: #000000; /* Black for consistency */
+    margin-right: 1px; /* Reduced from 1px */
+}
+
+#preview-contact a {
+    color: #000000; /* Black for ATS compatibility */
+    text-decoration: none;
+    font-size: 9px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#preview-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Heading Styling */
+#resume-preview h5 {
+    font-family: 'Barlow', sans-serif; /* Using Barlow for consistency */
+    font-weight: 700; /* Bold for headings */
+    color: #000000;
+    margin: 2px 0 0; /* Reduced from 4px 0 1px */
+    font-size: 11px; /* Reduced from 12px to compact */
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0; /* Removed padding to save space */
+}
+
+/* Content Styling */
+#preview-summary {
+    font-size: 9px; /* Reduced from 10px to compact */
+    line-height: 1.0; /* Reduced from 1.1 */
+    color: #2B2B2B;
+    margin-bottom: 1px; /* Reduced from 2px */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+ul {
+    padding-left: 8px; /* Reduced from 10px for tighter spacing */
+    margin: 0 0 1px 0; /* Reduced from 2px */
+    list-style-type: disc; /* Simple bullets for all lists */
+    padding-right: 0;
+}
+
+ul li {
+    font-size: 9px; /* Reduced from 10px to compact */
+    line-height: 1.0; /* Reduced from 1.1 */
+    color: #2B2B2B;
+    margin-bottom: 1px; /* Reduced from 2px */
+    page-break-inside: avoid;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#preview-skills {
+    font-size: 9px; /* Reduced from 10px to compact */
+    line-height: 1.0; /* Reduced from 1.1 */
+    color: #2B2B2B;
+    margin-bottom: 1px; /* Reduced from 2px */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#preview-skills strong {
+    font-weight: 700; /* Bold for emphasis */
+    color: #000000;
+}
+
+#declaration {
+    font-size: 9px; /* Reduced from 10px to compact */
+    font-style: italic;
+    color: #2B2B2B;
+    margin-top: 2px; /* Reduced from 4px */
+    margin-bottom: 1px; /* Reduced from 2px */
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 1px solid #000000;
+    padding-top: 0; /* Removed padding to save space */
+    text-align: center;
+}
+
+/* Spinner */
+#spinner {
+    margin-top: 10px;
+}
+
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Dynamic Entry Styling */
+.education-entry, .experience-entry, .project-entry {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.education-entry .form-control, 
+.experience-entry .form-control, 
+.project-entry .form-control {
+    margin-bottom: 5px;
+    flex: 1 1 auto;
+    margin-right: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.education-entry .form-control:last-child, 
+.experience-entry .form-control:last-child, 
+.project-entry .form-control:last-child {
+    margin-right: 0;
+}
+
+.education-entry textarea,
+.project-entry textarea {
+    flex: 2 1 auto;
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #resume-preview {
+        padding: 10px;
+        width: 100%;
+        min-height: 100vh; /* Full viewport height on mobile */
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #preview-name {
+        font-size: 16px; /* Adjusted for mobile */
+    }
+
+    #preview-position {
+        font-size: 12px;
+    }
+
+    .nav {
+        top: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+    }
+
+    .navbtn {
+        margin-bottom: 0;
+        height: 35px;
+        width: 35px;
+    }
+
+    .navbtn:hover {
+        height: 40px;
+        width: 40px;
+    }
+
+    .navbtn:nth-child(2), .navbtn:nth-child(3) {
+        top: 0;
+    }
+
+    .navbtn i {
+        font-size: 14px;
+    }
+}
+
+/* Enhanced Print Media Query for PDF (Single Page) */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    .nav, #resumeForm, #spinner, .btn {
+        display: none !important;
+    }
+    #resume-preview {
+        /* ... existing properties ... */
+        font-size: 10px; /* Increased from 9px */
+        line-height: 1.1; /* Increased from 1.0 */
+        padding: 0.03in; /* Increased from 0.02in */
+        gap: 6px; /* Increased from 4px */
+        min-height: 10.94in; /* Adjusted for new padding */
+        max-height: 10.94in;
+    }    }
+    hr.section-divider {
+        border-top: 1px solid #000000;
+        margin: 2px 0; /* Reduced from 4px */
+        height: 1px;
+    }
+    #resume-preview h5 {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        color: #000000;
+        margin: 2px 0 0 !important; /* Reduced from 4px 0 1px */
+        font-size: 11px; /* Reduced from 12px */
+        border-bottom: 1px solid #000000;
+        padding-bottom: 0 !important; /* Removed padding to save space */
+    }
+    #resume-preview ul {
+        padding-left: 8px !important; /* Reduced from 10px */
+        margin: 0 0 1px 0 !important; /* Reduced from 2px */
+        list-style-type: disc !important;
+        padding-right: 0 !important;
+    }
+    #resume-preview ul li {
+        font-size: 9px; /* Reduced from 10px */
+        margin-bottom: 1px !important; /* Reduced from 2px */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    #resume-preview h1, #resume-preview h2, #resume-preview h3, #resume-preview h5 {
+        page-break-after: avoid;
+    }
+    ul, li {
+        page-break-inside: avoid;
+    }
+}
